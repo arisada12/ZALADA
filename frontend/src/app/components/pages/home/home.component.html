@@ -1,0 +1,19 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]="!books || !books.length" resetLinkText="Reset Search"></app-not-found>
+<ul>
+  <li *ngFor="let book of books">
+    <a routerLink="/book/{{book.id}}">
+      <img [src]="book.ImageUrl" [alt]="book.name">
+      <div class="content">
+        <div class="name">{{book.name}}</div>
+        <span class="favourite {{book.favorite? '' : 'not'}}">❤</span>
+        <div class="stars">👍 {{book.stars}}</div>
+        <div class="product-item-footer">
+          <div class="author">{{book.author}}</div>
+          <div class="price"><span>{{book.price | currency}}</span></div>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

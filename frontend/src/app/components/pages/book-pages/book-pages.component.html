@@ -1,0 +1,17 @@
+<app-not-found [visible]="!book.id" notFoundMessage="Book Not Found" resetLinkText="Back to Home"></app-not-found>
+<div class="container" *ngIf="book.id">
+  <img [src]="book.ImageUrl" [alt]="book.name"/>
+  <div class="details">
+    <div class="header">
+      <span class="name">{{book.name}}</span>
+      <span class="favourite {{book.favorite? '' : 'not'}}">❤</span>
+    </div>
+    <div class="stars">👍 {{book.stars}}</div>
+    <div class="author">{{book.author}}</div>
+    <div class="tags">
+      <a *ngFor="let tag of book.tags" routerLink="/tag/{{tag}}">{{tag}}</a>
+    </div>
+    <div class="price"><span>{{book.price | currency}}</span></div>
+    <button (click)="addToCart()">Add to Cart</button>
+  </div>
+</div>
