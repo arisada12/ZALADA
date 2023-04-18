@@ -14,7 +14,9 @@ export class BookPagesComponent {
   constructor(activateRoute:ActivatedRoute, bookservice:BookService, private cartService:CartService, private router:Router){
     activateRoute.params.subscribe((params)=>{
       if(params["id"]){
-        this.book = bookservice.getBookById(params["id"])
+        bookservice.getBookById(params["id"]).subscribe(serverBook =>{
+          this.book = serverBook
+        })
       }
     })
   }
