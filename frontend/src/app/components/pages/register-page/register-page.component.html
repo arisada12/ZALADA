@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="details">
+    <app-title title="Register"></app-title>
+    <form [formGroup]="registerForm" (submit)="submit()">
+      <text-input [control]="fc['name']" [showErrorsWhen]="isSubmited" label="Name"></text-input>
+      <text-input [control]="fc['email']" [showErrorsWhen]="isSubmited" label="Email" type="email"></text-input>
+      <text-input [control]="fc['password']" [showErrorsWhen]="isSubmited" label="Password" type="password"></text-input>
+      <text-input [control]="fc['confirmPassword']" [showErrorsWhen]="isSubmited" label="Confirm Password" type="password"></text-input>
+      <text-input [control]="fc['address']" [showErrorsWhen]="isSubmited" label="Address"></text-input>
+      <default-button text="Register"></default-button>
+      <div class="login">Already a user? &nbsp;
+        <a routerLink="/login" [queryParams]="{returnUrl:returnUrl}">Login here</a>
+      </div>
+    </form>
+  </div>
+</div>
