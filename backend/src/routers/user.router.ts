@@ -1,7 +1,7 @@
 import { Router } from "express"
 import { sample_users } from "../data"
 import jwt from "jsonwebtoken"
-import asyncHandler from "express-async-handler"
+const asyncHandler = require("express-async-handler")
 import { User, UserModel } from "../models/user.model"
 import { HTTP_BAD_REQUEST } from "../constant/http_status"
 const router = Router()
