@@ -14,7 +14,7 @@ app.use(express.json())
 
 //fix cors error because i split front end and backend for size issue
 app.use(function (req:any, res:any, next:any) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://remarkable-horse-a9aa77.netlify.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'remarkable-horse-a9aa77.netlify.app/');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
