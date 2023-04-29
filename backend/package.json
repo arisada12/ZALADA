@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd src && node server",
+    "start": "cd built && node server",
     "build": "npm install --omit=dev && tsc"
   },
   "author": "",
