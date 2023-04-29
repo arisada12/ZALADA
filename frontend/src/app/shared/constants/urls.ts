@@ -1,6 +1,4 @@
-import { environment } from "src/environments/environment"
-
-const BASE_URL = environment.production? "" : "http://localhost:5000"
+const BASE_URL = "https://busy-blue-cockatoo-shoe.cyclic.app"
 
 export const BOOKS_URL = BASE_URL + "/api/books"
 export const BOOKS_TAGS_URL = BOOKS_URL+"/tags"
