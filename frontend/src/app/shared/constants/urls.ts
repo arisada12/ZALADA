@@ -1,3 +1,5 @@
+//Change to from http://localhost:5000 if not in production stage
+
 const BASE_URL = "https://busy-blue-cockatoo-shoe.cyclic.app"
 
 export const BOOKS_URL = BASE_URL + "/api/books"
