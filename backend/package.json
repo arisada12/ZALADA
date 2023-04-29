@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd src && nodemon server.ts",
-    "build": "npm install && tsc"
+    "build": "npm install --production && tsc"
   },
   "author": "",
   "license": "ISC",
