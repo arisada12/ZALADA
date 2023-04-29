@@ -14,7 +14,8 @@ app.use(express.json())
 
 app.use(cors({
     credentials: true,
-    origin:["http://localhost:4200"]
+//Because of size issue, I just split the back and front end, this is for solve cors issue, just change it to http://localhost:4200 if in developer stage
+    origin:["https://remarkable-horse-a9aa77.netlify.app/"]
 }))
 
 app.use("/api/books", bookRouter)
