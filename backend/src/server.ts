@@ -21,7 +21,7 @@ app.use(function (req:any, res:any, next:any) {
     next();
     });
 
-//It's doesn't work wen I delete core module, I don't know...
+//It's doesn't work when I delete core module, I don't know...
 app.use(cors({
     credentials: true,
     origin:["*"]
