@@ -2,6 +2,7 @@ import dotenv from "dotenv"
 dotenv.config();
 import path from "path"
 import express from "express"
+import cors from "cors"
 import bookRouter from "./routers/book.router"
 import userRouter from "./routers/user.router"
 import orderRouter from "./routers/order.router"
@@ -19,6 +20,12 @@ app.use(function (req:any, res:any, next:any) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
     });
+
+//It's doesn't work wen I delete core module, I don't know...
+app.use(cors({
+    credentials: true,
+    origin:["*"]
+}))
 
 app.use("/api/books", bookRouter)
 app.use("/api/users", userRouter)
