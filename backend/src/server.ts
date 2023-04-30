@@ -2,7 +2,6 @@ import dotenv from "dotenv"
 dotenv.config();
 import path from "path"
 import express from "express"
-import cors from "cors"
 import bookRouter from "./routers/book.router"
 import userRouter from "./routers/user.router"
 import orderRouter from "./routers/order.router"
@@ -13,10 +12,13 @@ const app = express()
 app.use(express.json())
 
 //fix cors issue
-app.use(cors({
-    credentials: true,
-    origin:["*"]
-}))
+app.use(function (req:any, res:any, next:any) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+    });
 
 app.use("/api/books", bookRouter)
 app.use("/api/users", userRouter)
