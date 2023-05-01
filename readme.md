@@ -4,7 +4,7 @@ Tried MEAN (MongoDB Express Angular Node) in the form of e-commerce which now ha
 
 ## DEMO
 
-[ZALADA](https://remarkable-horse-a9aa77.netlify.app/)
+[ZALADA](https://zalada.netlify.app/)
 
 ## TO DO LIST
 
